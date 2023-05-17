@@ -1,5 +1,6 @@
 import Main from "../components/Main";
 import Row from "../components/Row";
+import Footer from "../components/Footer";
 
 import requests from "../api/api";
 
@@ -12,6 +13,7 @@ function Home() {
       <Row title="Popular" fetchURL={requests.requestPopular} />
       <Row title="Trending" fetchURL={requests.requestTrending} />
       <Row title="Horror" fetchURL={requests.requestHorror} />
+      <Footer />
     </>
   );
 }

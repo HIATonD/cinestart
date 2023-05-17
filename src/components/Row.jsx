@@ -14,9 +14,9 @@ function Row({ title, fetchURL }) {
     <>
       <h2 className="text-white font-bold md:text-xl p-4">{title}</h2>
       <div className="relative flex items-center">
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap items-center">
           {movies.map((item) => (
-            <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block relative cursor-pointer p-2">
+            <div className="w-[260px] sm:w-[280px] md:w-[280px] lg:w-[270px] inline-block relative cursor-pointer p-2">
               <img
                 className="w-full h-auto block text-white"
                 src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}

@@ -35,10 +35,10 @@ function Main() {
         <div className="absolute w-full top-[20%] p-4 md:p-8">
           <h1 className="text-3xl md:text-5xl font-semibold">{movie?.title}</h1>
           <div className="my-4">
-            <button className="border rounded bg-red-600 text-black border-red-600 py-2 px-5">
+            <button className="border rounded bg-red-600 text-black border-red-600 py-2 px-5 hover:bg-red-600/80">
               Play
             </button>
-            <button className="border rounded text-white border-red-600 py-2 px-5 ml-4">
+            <button className="border rounded text-white border-red-600 py-2 px-5 ml-4 hover:bg-red-600">
               Watch Later
             </button>
           </div>
