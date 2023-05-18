@@ -6,7 +6,7 @@ function Navbar() {
       <h1 className="text-indigo-600 text-2xl font-semibold cursor-pointer uppercase">
         HIA<span className="text-red-600">TonD</span>
       </h1>
-      <div className="sm:flex items-center hidden sm:inline-block text-white px-4 py-2 w-[30%] bg-gray-500/40 rounded-3xl">
+      <div className="sm:flex items-center hidden  text-white px-4 py-2 w-[30%] bg-gray-500/40 rounded-3xl">
         <FaSearch className="mr-2" />
         <input
           type="text"
