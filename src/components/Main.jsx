@@ -32,22 +32,24 @@ function Main() {
           src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}
           alt={movie?.title}
         />
-        <div className="absolute w-full top-[20%] p-4 md:p-8">
-          <h1 className="text-3xl md:text-5xl font-semibold">{movie?.title}</h1>
-          <div className="my-4">
-            <button className="border rounded bg-red-600 text-black border-red-600 py-2 px-5 hover:bg-red-600/80">
-              Play
-            </button>
-            <button className="border rounded text-white border-red-600 py-2 px-5 ml-4 hover:bg-red-600">
-              Watch Later
-            </button>
-          </div>
+        <div className="absolute w-full top-[20%] p-4 sm:p-24 flex flex-col justify-center items-center text-center">
+          <h1 className="text-3xl sm:text-6xl sm:mb-4 font-semibold">
+            {movie?.title}
+          </h1>
           <p className="text-gray-400 text-sm">
             Released: {movie?.release_date}
           </p>
           <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">
             {truncateString(movie?.overview, 150)}
           </p>
+          <div className="my-4">
+            <button className="border rounded-3xl bg-red-600 text-black border-red-600 py-2 px-5 hover:bg-red-600/80 font-medium">
+              Play
+            </button>
+            <button className="border rounded-3xl text-white border-red-600 py-2 px-5 ml-4 hover:bg-red-600 font-medium">
+              Watch Later
+            </button>
+          </div>
         </div>
       </div>
     </div>

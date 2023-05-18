@@ -12,9 +12,9 @@ function Row({ title, fetchURL }) {
   // console.log(movies);
   return (
     <>
-      <h2 className="text-white font-bold md:text-xl p-4">{title}</h2>
+      <h2 className="text-red-600 font-bold md:text-xl py-8 px-4">{title}</h2>
       <div className="relative flex items-center">
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center mx-1">
           {movies.map((item) => (
             <div className="w-[260px] sm:w-[280px] md:w-[280px] lg:w-[270px] inline-block relative cursor-pointer p-2">
               <img
