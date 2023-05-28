@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import Movie from "./Movie";
+
 function Row({ title, fetchURL }) {
   const [movies, setMovies] = useState([]);
 
@@ -12,22 +14,16 @@ function Row({ title, fetchURL }) {
   // console.log(movies);
   return (
     <>
-      <h2 className="text-red-600 font-bold md:text-xl py-8 px-4">{title}</h2>
-      <div className="relative flex items-center">
-        <div className="flex flex-wrap items-center mx-1">
-          {movies.map((item) => (
-            <div className="w-[260px] sm:w-[280px] md:w-[280px] lg:w-[270px] inline-block relative cursor-pointer p-2">
-              <img
-                className="w-full h-auto block text-white"
-                src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
-                alt={item.title}
-              />
-              <div className="absolute bottom-0 left-0 w-full h-full hover:bg-black/80 opacity-0 text-white hover:opacity-100">
-                <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">
-                  {item.title}
-                </p>
-              </div>
-            </div>
+      <h2 className="text-red-600 text-xl font-bold md:text-4xl py-8 px-4 text-center">
+        {title}
+      </h2>
+      <div className="relative flex items-center group">
+        <div
+          id={"slider"}
+          className="flex flex-wrap items-center mx-1 relative"
+        >
+          {movies.map((item, id) => (
+            <Movie key={id} item={item} />
           ))}
         </div>
       </div>

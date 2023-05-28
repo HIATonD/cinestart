@@ -10,7 +10,7 @@ function Navbar() {
         <FaSearch className="mr-2" />
         <input
           type="text"
-          className="bg-transparent border-none outline-0"
+          className="bg-transparent border-none outline-0 w-full"
           placeholder="Find Movies & TV"
         />
       </div>
